@@ -7,3 +7,16 @@
 /* Readability refinements: keep secondary information legible on laptop displays. */
 .panel h2{font-size:13px}.panel-head p,.metric-note{color:#77836f}.metric-label{color:#687760}.metric-note{font-size:9px}.canvas-badge,.canvas-meta{color:#6d7e62}.canvas-legend{color:#6e805f}.node-port{fill:#6c7e5f;font-size:9px}.node-label{font-size:13px}.topology-foot p{color:#697e5a;font-size:10px}.config-row label{color:#718361}.form-note,.reachability{color:#758569;font-size:9px}.subtle{color:#72845f;font-size:10px}.message-presets button{font-size:9px;color:#657b51}.segmented button{font-size:10px;color:#6c7e5c}.tab-row button{color:#72845e;font-size:10px}.event{font-size:9px}.event p{color:#667c50}.event time{font-size:8px;color:#7d8c6e}.activity-foot{color:#7b8d6b;font-size:8px}.socket-note{color:#748761;font-size:9px}th{font-size:9px;color:#758761}td{font-size:10px;color:#61794d}td.mono{font-size:9px}.empty-state p{color:#82976c}.history-note,.history-card p{color:#718660}.method-note p{color:#6e8559}.guide-card p,.guide-card li{color:#60784e}.chart-footnote,.chart-title,.chart-footnote,.result-meta{color:#7d9267}.history-id{color:#7d9267}.compare-metrics span{color:#768d60}.comparison-table td:first-child{color:#60794a}.compare-card h2{font-size:23px}.guide-card h2{font-size:22px}.comparison-setup p{color:#6e865a}.comparison-setup h2{font-size:15px}.empty-state.large h2{font-size:20px}.inbox-message header{color:#6a8750}.inbox-message p{color:#526e37}.records-head{color:#6e8656}
 @media(max-width:720px){.topology-foot p{font-size:9px}.config-row label{font-size:8px}.panel h2{font-size:13px}.canvas-legend{font-size:7px}.canvas-badge,.canvas-meta{font-size:7px}.form-note,.reachability{font-size:9px}.tab-row button{font-size:9px}.event{font-size:9px}.guide-card h2{font-size:21px}}
+
+/* Keep the team visible on shorter desktop windows and when zoomed in. */
+@media (min-width:721px){
+ .sidebar{overflow-y:auto;overscroll-behavior:contain}
+ .sidebar>*{flex-shrink:0}
+}
+@media (min-width:721px) and (max-height:850px){
+ .sidebar-note{display:none}
+ .team-card{padding-top:18px}
+ .team-card .eyebrow{margin-bottom:10px}
+ .team-card>div{margin-top:8px}
+ .team-card footer{margin-top:14px;padding-top:12px}
+}
