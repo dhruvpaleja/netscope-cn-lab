@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore peer-to-peer and client-server networks through a real TCP socket laboratory.">
+<title>NetScope — Network Architecture Lab</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to laboratory</a>
+<aside class="sidebar">
+  <a class="brand" href="#lab" aria-label="NetScope home"><span class="brand-mark">n<span>↗</span></span><span>netscope<span class="brand-dot">.</span></span></a>
+  <div class="workspace-label">COMPUTER NETWORKS <span>01</span></div>
+  <nav aria-label="Main navigation">
+    <a href="#lab" class="nav-item active" data-view="lab"><span class="nav-symbol">⌘</span>Live laboratory<span class="nav-small">LIVE</span></a>
+    <a href="#compare" class="nav-item" data-view="compare"><span class="nav-symbol">⇄</span>Compare architectures</a>
+    <a href="#history" class="nav-item" data-view="history"><span class="nav-symbol">◷</span>Experiment history</a>
+    <a href="#guide" class="nav-item" data-view="guide"><span class="nav-symbol">▤</span>Concept guide</a>
+  </nav>
+  <div class="sidebar-note"><div class="mini-orbit"><i></i><i></i><i></i><i></i></div><strong>Not just a simulation.</strong><p>Real TCP connections.<br>Observable architecture.</p><span>127.0.0.1 / LOOPBACK</span></div>
+  <div class="team-card"><span class="eyebrow">B2 / GROUP 01</span><div><b>DP</b><p>Dhruv Paleja<small>I081</small></p></div><div><b>MS</b><p>Manan Shah<small>I053</small></p></div><div><b>AL</b><p>Armaan Lad<small>I076</small></p></div><footer>CN MINI PROJECT · 2026</footer></div>
+</aside>
+<div class="app-shell">
+  <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb-title">Live laboratory</strong></div><div class="top-actions"><span class="connection"><i id="connection-dot"></i><span id="connection-label">Connecting…</span></span><button class="button small" id="export-session">↗ Export session</button></div></header>
+  <main id="main">
+    <div id="global-error" class="alert error hidden" role="alert"></div>
+    <div id="busy-banner" class="busy-banner hidden" role="status"><span class="spinner"></span><span id="busy-text"></span></div>
+    <section class="view" id="view-lab" aria-labelledby="lab-title">
+      <div class="page-heading"><div><span class="eyebrow">EXPLORE. TRANSMIT. UNDERSTAND.</span><h1 id="lab-title">A network you can see.</h1><p>Two architectures. Real connections. Every message, explained.</p></div><button class="button" id="reset-network">↻ Reset network</button></div>
+      <div class="metric-grid" id="metrics"></div>
+      <div class="lab-grid">
+        <section class="panel topology-panel" aria-label="Interactive network topology">
+          <div class="panel-head topology-head"><div><h2>Network topology</h2><p id="topology-subtitle">Centralized message routing</p></div><div class="segmented" aria-label="Architecture"><button id="mode-cs" data-mode="client-server" class="selected" aria-pressed="true">Client–server</button><button id="mode-p2p" data-mode="peer-to-peer" aria-pressed="false">Peer-to-peer</button></div></div>
+          <div class="network-canvas"><div class="canvas-badge"><i></i> REAL TCP SOCKETS</div><span class="canvas-meta" id="canvas-meta">4 ENDPOINTS</span><svg id="topology" viewBox="0 0 800 410" role="img" aria-label="Live TCP network connections"></svg><div class="canvas-legend"><span><i class="legend-line"></i>Active connection</span><span><i class="legend-dot"></i>Data frame</span><span><i class="legend-dot ack"></i>Application ACK</span></div></div>
+          <div class="topology-foot"><span class="info-circle">i</span><p id="architecture-insight">Every message passes through the central server. Click a node to inspect it.</p><span class="pill" id="hop-badge">2 DATA HOPS</span></div>
+          <div class="config-row"><label>Endpoints<select id="node-count" aria-label="Number of endpoints"><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label><label>Teaching delay<select id="teaching-delay" aria-label="Application teaching delay"><option value="0">Off · actual loopback RTT</option><option value="20">20 ms / application hop</option><option value="50">50 ms / application hop</option><option value="100">100 ms / application hop</option></select></label><button class="text-button" id="apply-config">Apply & reset ↗</button></div>
+        </section>
+        <div class="control-column">
+          <section class="panel composer"><div class="panel-head"><h2>Send a message</h2><span class="tag">TCP</span></div><form id="message-form"><div class="form-pair"><label for="sender">From<select id="sender"></select></label><label for="recipient">To<select id="recipient"></select></label></div><label for="message-text">Payload <span id="byte-count">0 / 4096 bytes</span></label><textarea id="message-text" rows="3" placeholder="Hello, network. Let's make a connection.">Hello from NetScope!</textarea><div class="message-presets"><button type="button" data-message="Hello from NetScope!">Hello network</button><button type="button" data-message="नमस्ते 🌐 — TCP handles Unicode too.">Unicode test</button></div><button class="button primary send-button" id="send-message" type="submit">Transmit message <span>↗</span></button><p class="form-note">Success is recorded only after an application ACK.</p><div id="send-result" class="send-result hidden" role="status"></div></form></section>
+          <section class="panel fault-panel"><div class="panel-head"><h2>Fault laboratory</h2><span class="tag muted">CONTROLLED</span></div><p class="subtle">Take an endpoint offline. Observe what still works.</p><button class="hub-toggle" id="hub-toggle"><span>Central server</span><span class="toggle-label">Stop server</span></button><div id="node-controls" class="node-controls"></div><p id="reachability" class="reachability"></p></section>
+        </div>
+      </div>
+      <div class="lower-grid">
+        <section class="panel inspector-panel"><div class="tab-row" role="tablist" aria-label="Network records"><button class="active" role="tab" aria-selected="true" data-tab="messages">Delivery log <span id="message-count">0</span></button><button role="tab" aria-selected="false" data-tab="inbox">Node inbox</button><button role="tab" aria-selected="false" data-tab="sockets">Socket inspector</button><button class="text-button export-csv" id="export-csv" role="button" aria-label="Export message log as CSV">↓ CSV</button></div><div id="records-content"></div></section>
+        <section class="panel activity-panel"><div class="panel-head"><h2>Live event stream</h2><span class="live-indicator">● LIVE</span></div><div id="event-stream" class="event-stream" aria-label="Network event history"></div><div class="activity-foot">DATA & ACK events come from backend socket operations.</div></section>
+      </div>
+    </section>
+    <section class="view hidden" id="view-compare" aria-labelledby="compare-title">
+      <div class="page-heading"><div><span class="eyebrow">CONTROLLED EXPERIMENTS</span><h1 id="compare-title">Compare. Don't assume.</h1><p>The same workload, measured across both architectures.</p></div><span class="pill">REAL MEASUREMENTS</span></div>
+      <div class="comparison-setup panel"><div><h2>Experiment settings</h2><p>Fresh sockets per trial · 64-byte payload · A → B · 3 excluded warm-up messages</p></div><div class="experiment-fields"><label>Endpoints<select id="compare-count"><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label><label>Messages / trial<select id="compare-messages"><option>10</option><option selected>30</option><option>50</option><option>100</option></select></label><label>Trials<select id="compare-trials"><option>1</option><option selected>3</option><option>5</option></select></label><button class="button primary" id="run-comparison">Run comparison ↗</button></div></div>
+      <div class="method-note"><span class="info-circle">i</span><p>Benchmarks use <strong>zero teaching delay</strong>. RTT includes application processing and logging on one machine. These results are not internet latency, bandwidth or a universal speed ranking.</p></div>
+      <div id="comparison-results"><div class="empty-state large"><div class="empty-symbol">⇄</div><h2>Let the network do the talking.</h2><p>Run an experiment to compare real delivery, application RTT,<br>connection overhead, failure isolation and recovery.</p></div></div>
+    </section>
+    <section class="view hidden" id="view-history" aria-labelledby="history-title"><div class="page-heading"><div><span class="eyebrow">YOUR EVIDENCE, IN ONE PLACE</span><h1 id="history-title">Experiment history.</h1><p>Revisit measurements. Inspect settings. Export your findings.</p></div><button class="button" id="refresh-history">↻ Refresh</button></div><div id="history-list"></div><p class="history-note">The latest 30 completed experiments are saved in data/experiments.json on this machine. Live message logs remain session-only.</p></section>
+    <section class="view hidden" id="view-guide" aria-labelledby="guide-title"><div class="page-heading"><div><span class="eyebrow">THE CONCEPTS BEHIND THE CONNECTIONS</span><h1 id="guide-title">Understand the why.</h1><p>A practical guide to what NetScope demonstrates—and what it does not.</p></div><span class="pill">UNIT 01</span></div><div id="guide-content"></div></section>
+    <footer class="page-footer"><span>NETSCOPE / CN MINI PROJECT</span><span>Built for observation, not assumptions.</span><span>B2 · GROUP 01</span></footer>
+  </main>
+</div>
+<div class="toast hidden" id="toast" role="status"></div>
+<dialog id="reset-dialog"><div class="dialog-content"><span class="eyebrow">START FRESH</span><h2>Reset this network?</h2><p>Live messages, event logs and counters will be cleared. Saved experiments stay available.</p><div class="dialog-actions"><button class="button" id="cancel-reset">Keep working</button><button class="button primary" id="confirm-reset">Reset network</button></div></div></dialog>
+</body></html>

@@ -1,0 +1,42 @@
+NETSCOPE | COMPUTER NETWORKS MINI PROJECT
+
+Topic: Simulate Peer-to-Peer vs Client-Server Architecture
+Team: Dhruv Paleja (I081), Manan Shah (I053), Armaan Lad (I076)
+B2 / Group 1
+
+1. EXTRACT the complete ZIP. Do not run files from inside the ZIP viewer.
+2. Install Node.js 22 or newer if needed.
+3. Windows: double-click start-windows.bat.
+   macOS/Linux: open Terminal here and run sh start-mac-linux.sh.
+   Any platform: open Terminal here and run npm start.
+4. Open http://127.0.0.1:3000 in your browser.
+5. Keep the terminal open. Ctrl+C stops the application.
+
+No npm install, API key, account or database is required.
+Do not open public/index.html directly; it needs the local Node/TCP engine.
+
+SUBMISSION FILES
+- docs/NetScope_Presentation.pptx: editable 14-slide PowerPoint, with speaker notes.
+- docs/NetScope_Presentation.pdf: PDF copy of the presentation.
+- docs/NetScope_Project_Report.docx: editable 10-page project report.
+- docs/NetScope_Project_Report.pdf: printable report.
+- docs/PRESENTATION_SCRIPT.md: slide-wise script for three presenters.
+- docs/VIVA_QA.md: 30 viva questions and answers, plus a demo introduction.
+- docs/CN_Groups_List_NetScope_Selected.xlsx: local topic-selected workbook copy.
+- README.md: full setup, features, limitations and troubleshooting.
+- evidence/: actual screenshots, measurements and test logs.
+
+LIVE DEMO
+Send A -> B in client-server mode. Stop the hub; repeat. Restore it.
+Switch to peer-to-peer. Stop D; compare A -> B with A -> D. Restore D.
+Run Compare architectures and open saved history.
+
+TESTS
+npm test
+
+All endpoints exchange messages through real TCP sockets, but share one local
+machine and Node.js process. This is a teaching lab, not a WAN benchmark.
+UI checks used a documented HTTP bridge; native SSE was tested independently.
+
+Topic availability was checked against the uploaded B1 and B2 workbook snapshot.
+The supplied selected workbook is a local copy; no shared class list was changed.

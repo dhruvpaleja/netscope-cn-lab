@@ -1,0 +1,225 @@
+{
+  "selection_date": "2026-10-01",
+  "source_files": [
+    "Mini_Projects.xlsx",
+    "CN Groups List.xlsx"
+  ],
+  "sheets_checked": [
+    "B1!A1:D44",
+    "B2!A1:D33"
+  ],
+  "matching_note": "Reviewed every populated Topic cell, including standalone topic rows and descriptive continuations. Considered equivalent wording, not just exact string matches.",
+  "selected_topic": {
+    "number": 1,
+    "topic": "Simulate Peer-to-Peer vs Client-Server Architecture",
+    "source": "Mini_Projects.xlsx / Sheet1!B6",
+    "assigned_cells": [],
+    "status": "Not listed as assigned"
+  },
+  "alternative_untaken_topic": {
+    "number": 3,
+    "topic": "Visual Demonstration of OSI vs TCP/IP Layer Mapping",
+    "source": "Mini_Projects.xlsx / Sheet1!B23",
+    "assigned_cells": [],
+    "status": "Not listed as assigned"
+  },
+  "group": {
+    "sheet": "B2",
+    "group": 1,
+    "members": [
+      {
+        "name": "DHRUV PALEJA",
+        "roll": "I081"
+      },
+      {
+        "name": "MANAN SHAH",
+        "roll": "I053"
+      },
+      {
+        "name": "ARMAAN LAD",
+        "roll": "I076"
+      }
+    ]
+  },
+  "scope_note": "Availability reflects the uploaded workbook only. No live shared class sheet was checked or reserved. The selected-copy workbook is a local edited copy.",
+  "all_numbered_topics": [
+    {
+      "number": 1,
+      "topic": "Simulate Peer-to-Peer vs Client-Server Architecture",
+      "source": "Mini_Projects.xlsx / Sheet1!B6",
+      "assigned_cells": [],
+      "status": "Not listed as assigned"
+    },
+    {
+      "number": 2,
+      "topic": "Network Topology Simulator",
+      "source": "Mini_Projects.xlsx / Sheet1!B12",
+      "assigned_cells": [
+        "B2 D7"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 3,
+      "topic": "Visual Demonstration of OSI vs TCP/IP Layer Mapping",
+      "source": "Mini_Projects.xlsx / Sheet1!B23",
+      "assigned_cells": [],
+      "status": "Not listed as assigned"
+    },
+    {
+      "number": 4,
+      "topic": "Transmission Media Comparison Dashboard",
+      "source": "Mini_Projects.xlsx / Sheet1!B29",
+      "assigned_cells": [
+        "B2 D21:D22"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 5,
+      "topic": "CRC and Hamming Code Simulator",
+      "source": "Mini_Projects.xlsx / Sheet1!B38",
+      "assigned_cells": [
+        "B1 D12",
+        "B2 D31"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 6,
+      "topic": "Stop-and-Wait Protocol Simulation (Noiseless and Noisy)",
+      "source": "Mini_Projects.xlsx / Sheet1!B44",
+      "assigned_cells": [
+        "B1 D23"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 7,
+      "topic": "Go-Back-N and Selective Repeat ARQ Simulator",
+      "source": "Mini_Projects.xlsx / Sheet1!B50",
+      "assigned_cells": [
+        "B2 D10"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 8,
+      "topic": "ALOHA and CSMA Protocol Simulator",
+      "source": "Mini_Projects.xlsx / Sheet1!B58",
+      "assigned_cells": [
+        "B2 D19"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 9,
+      "topic": "Piggybacking Frame Communication",
+      "source": "Mini_Projects.xlsx / Sheet1!B66",
+      "assigned_cells": [
+        "B1 D35"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 10,
+      "topic": "Subnet Calculator with CIDR Notation",
+      "source": "Mini_Projects.xlsx / Sheet1!B75",
+      "assigned_cells": [
+        "B1 D31"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 11,
+      "topic": "IPV4 vs IPV6 Packet Structure Viewer",
+      "source": "Mini_Projects.xlsx / Sheet1!B84",
+      "assigned_cells": [
+        "B1 D8"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 12,
+      "topic": "ARP, RARP, and DHCP Workflow Simulation",
+      "source": "Mini_Projects.xlsx / Sheet1!B93",
+      "assigned_cells": [
+        "B1 D27"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 13,
+      "topic": "RIP and Bellman-Ford Algorithm Simulator",
+      "source": "Mini_Projects.xlsx / Sheet1!B102",
+      "assigned_cells": [
+        "B1 D15"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 14,
+      "topic": "Dijkstra and Link-State Routing Visualizer",
+      "source": "Mini_Projects.xlsx / Sheet1!B110",
+      "assigned_cells": [
+        "B1 D4"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 15,
+      "topic": "TCP 3-Way Handshake Demo",
+      "source": "Mini_Projects.xlsx / Sheet1!B119",
+      "assigned_cells": [
+        "B2 D24:D25"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 16,
+      "topic": "UDP vs TCP Chat Application",
+      "source": "Mini_Projects.xlsx / Sheet1!B126",
+      "assigned_cells": [
+        "B2 D13"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 17,
+      "topic": "Congestion Control Visualizer",
+      "source": "Mini_Projects.xlsx / Sheet1!B135",
+      "assigned_cells": [
+        "B1 D19",
+        "B2 D28"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 18,
+      "topic": "DNS Resolver Simulation",
+      "source": "Mini_Projects.xlsx / Sheet1!B144",
+      "assigned_cells": [
+        "B2 D17"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 19,
+      "topic": "Mini FTP Client-Server Tool",
+      "source": "Mini_Projects.xlsx / Sheet1!B150",
+      "assigned_cells": [
+        "B1 D42"
+      ],
+      "status": "Already listed"
+    },
+    {
+      "number": 20,
+      "topic": "Email Client Using SMTP and POP",
+      "source": "Mini_Projects.xlsx / Sheet1!B157",
+      "assigned_cells": [
+        "B1 D39"
+      ],
+      "status": "Already listed"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "netscope-cn-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Peer-to-peer vs client-server architecture: a real loopback TCP networking laboratory",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/*.test.js",
+    "evidence": "node scripts/collect-evidence.js",
+    "build": "node scripts/build.js"
+  }
+}
